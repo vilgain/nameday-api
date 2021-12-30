@@ -26,7 +26,7 @@ class ApiNamedayClass
             throw new Exception($e->getMessage());
         }
 
-        $this->countryList = json_decode(file_get_contents('src/data/countryList.json'));
+        $this->countryList = json_decode(file_get_contents(__DIR__ . '/data/countryList.json'));
     }
 
     public function searchByName(string $name, string $country): array
